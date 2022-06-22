@@ -9,7 +9,7 @@ terraform {
   }
 
   cloud {
-    organization = "meguaravs"
+    organization = "megauravs"
 
     workspaces {
       name = "hello-world"
