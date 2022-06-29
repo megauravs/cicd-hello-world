@@ -8,6 +8,10 @@ terraform {
       source  = "hashicorp/random"
       version = "3.0.1"
     }
+    sonarcloud = {
+      source  = "rewe-digital/sonarcloud"
+      version = "0.1.1"
+    }
   }
   required_version = ">= 1.1.0"
 
@@ -22,6 +26,10 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
+}
+provider "sonarcloud" {
+  organization = "megauravs"
+  token        = "0281a84c94dde92be0a70bad0c173efec665b774"
 }
 
 resource "random_pet" "sg" {}
